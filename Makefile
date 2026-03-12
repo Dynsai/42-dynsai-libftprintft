@@ -24,7 +24,7 @@ RM = rm -rf
 # -------------------
 # Variables test
 # -------------------
-TEST = test/test_exec
+TEST = test_bin/test_exec
 TEST_SRC = test_bin/maintest.c
 
 # -------------------
@@ -45,7 +45,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 # Test
 test: $(NAME)
-	mkdir -p test
+	mkdir -p test_bin
 	$(CC) $(CFLAGS) -Iinclude $(TEST_SRC) $(NAME) -o $(TEST)
 
 # Ejecutar test
